@@ -1,0 +1,35 @@
+<h1> Sneaker :</h1>
+<h2><%= @sneaker.brand %> <%= @sneaker.style %> <%= @sneaker.name %>  </h2>
+
+<form action="/sneakers/<%= @sneaker.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+   <li> <label>Brand:</label>
+    <input type="text" name="sneaker[brand]" value= "<%= @sneaker.brand%>"></li>
+
+  <li> <label>Style/Number:</label>
+    <input type="text" name="sneaker[style]" value= "<%= @sneaker.style %>"></li> 
+
+   <li> <label>Shoe Name:</label>
+    <input type="text" name="sneaker[name]" value=<%= @sneaker.name%>></li>
+
+   <li> <label>Size:</label>
+    <input type="text" name="sneaker[size]" value=<%=@sneaker.size%>></li>
+
+   <li> <label>Retail Price:</label>
+    <input type="text" name="sneaker[retail]" value=<%=@sneaker.retail%>></li>
+
+   <li> <label>colorway:</label>
+    <input type="text" name="sneaker[colorway]" value=<%=@sneaker.colorway%>></li>
+
+   <li> <label>Sku:</label>
+    <input type="text" name="sneaker[sku]" value=<%=@sneaker.sku%>></li>
+  
+  <li> <label>Release:</label>
+    <input type="text" name="sneaker[release]" value=<%=@sneaker.release%>></li>
+  
+
+    <li> <label>Url Photo:</label>
+    <input type="text" name="sneaker[imageurl]" value=<%=@sneaker.imageurl%> ></li>
+  <input type="submit" ></li>
+</form>

@@ -18,7 +18,6 @@ class SneakersController < ApplicationController
 
     get '/sneakers/new' do 
         if logged_in?
-        
         erb :"/sneakers/new"
         else 
             redirect :"/"
@@ -39,7 +38,6 @@ class SneakersController < ApplicationController
 
     get '/sneakers/:id' do
         find_sneaker
-        @user = current_user
             if @sneaker != nil
             erb :"sneakers/show"
             else
@@ -50,12 +48,12 @@ class SneakersController < ApplicationController
 
     get '/sneakers/:id/edit' do 
         find_sneaker
-        if validate_user
-            @sneaker
-                erb :"sneakers/edit" 
-        else
-            redirect '/sneakers/:id'
-        end
+            if validate_user
+                @sneaker
+                    erb :"sneakers/edit" 
+            else
+                redirect '/sneakers/:id'
+            end
     end
 
 
@@ -79,9 +77,7 @@ class SneakersController < ApplicationController
             end
     end
 
-   
-
-private 
+    private 
 
     def find_sneaker
         @sneaker = Sneaker.find_by_id(params[:id])

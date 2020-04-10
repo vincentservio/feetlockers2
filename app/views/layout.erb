@@ -14,30 +14,20 @@
     <link rel="stylesheet" href="/stylesheets/main1.css" />
 
 
-<% if logged_in? %>
+  <% if logged_in? %>
 
- <a href= '/logout'>Logout</a>
-  <center>
-    <a href='/sneakers/new'> New Kicks </a>             
-    ᛫ 
-    <a href='/sneakers'>Home Locker  </a>
-    </center>
- 
-<% end %>
-
-
-   
-   
-  </head>
+  <a href= '/logout'>Logout</a>
+    <center>
+      <a href='/sneakers/new'> New Kicks </a>             
+      ᛫ 
+      <a href='/sneakers'>Home Locker  </a>
+      </center>
+  <% end %>
+</head>
   <body>
-
-   
- 
-    <div class="wrapper">
-
-        <%= yield %>
-
-      <footer class="branding">
+  <div class="wrapper">
+     <%= yield %>
+   <footer class="branding">
         <small>&copy; 2020 <strong>Feetslocker</strong></small>
       </footer>
     </div>

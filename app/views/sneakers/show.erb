@@ -1,69 +1,62 @@
 
 <center>
-<h1>Sneaker Details <h1>
-<p></p>
+  <h1> Sneaker Details <h1>
+    <p></p>
+
+  <ul>
+    <h2><%= @sneaker.brand.titleize %></h2>
+    <h3><%= @sneaker.style.titleize %></h3>
+    <h3><%= @sneaker.name.titleize %></h3>
+  </ul>
+
+  <form action="/sneakers/<%=@sneaker.id%>/edit" method="patch">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" class="button" value="Edit">
+  </form>
+
+  <img src="<%= @sneaker.imageurl == "" ? "https://s0.as-img.com/r/pic/99/1500/1500/double_quarter.jpg?bg=f5f5f5&u=1537641591" : @sneaker.imageurl   %>"
+  alt="FeetLockers" width="450" height="325" >
+
+  <form action="/sneakers/<%=@sneaker.id%>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" class="button" value="delete">
+  </form>
 
 
 
-<ul>
-<h2><%= @sneaker.brand.titleize %></h2>
-<h2><%= @user.username.titleize %></h2>
+  <body>
 
+  <h2>Sneaker Attributes</h2>
+   <table>
+      <tr>
+        <th>Attributes:</th>
+        <th></th> 
+        
+      </tr>
+      <tr>
+        <td>Size:</td>
+        <td><%=@sneaker.size%></td>
+        
+      </tr>
+      <tr>
+        <td>Retail:</td>
+        <td><%=@sneaker.retail%></td>
+      </tr>
 
-<h3><%= @sneaker.style.titleize %></h3>
-<h3><%= @sneaker.name.titleize %></h3>
+      <tr>
+        <td>Colorway:</td>
+        <td><%=@sneaker.colorway%></td>
+      </tr>
 
+      <tr>
+        <td>Sku:</td>
+        <td><%=@sneaker.sku%></td>
+      </tr>
 
-</ul>
-</form>
-<form action="/sneakers/<%=@sneaker.id%>/edit" method="patch">
-<input type="hidden" name="_method" value="delete">
-<input type="submit" class="button" value="Edit">
-</form>
-
-<img src="<%= @sneaker.imageurl == "" ? "https://s0.as-img.com/r/pic/99/1500/1500/double_quarter.jpg?bg=f5f5f5&u=1537641591" : @sneaker.imageurl   %>"
-alt="FeetLockers" width="450" height="325" >
-
-<form action="/sneakers/<%=@sneaker.id%>" method="post">
-<input type="hidden" name="_method" value="delete">
-<input type="submit" class="button" value="delete">
-</form>
-
-
-
-<body>
-
-<h2>Sneaker Attributes</h2>
-
-<table>
-  <tr>
-    <th>Attributes:</th>
-    <th></th> 
-    
-  </tr>
-  <tr>
-    <td>Size:</td>
-    <td><%=@sneaker.size%></td>
-    
-  </tr>
-  <tr>
-    <td>Retail:</td>
-    <td><%=@sneaker.retail%></td>
-  </tr>
-
-  <tr>
-    <td>Colorway:</td>
-    <td><%=@sneaker.colorway%></td>
-  </tr>
-  <tr>
-    <td>Sku:</td>
-    <td><%=@sneaker.sku%></td>
-  </tr>
-  <tr>
-    <td>Release:</td>
-    <td><%=@sneaker.release%></td>
-  </tr>
-</table>
-
-
-</body>
+      <tr>
+        <td>Release:</td>
+        <td><%=@sneaker.release%></td>
+      </tr>
+    </table>
+  </body>
+</center>

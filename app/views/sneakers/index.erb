@@ -1,7 +1,7 @@
 <center>
 <h1>Hey <%= @user.username.capitalize %>.</h1>
     <h2> Here are your feetlocker selections: </h2>
-        <h3><%=@sneakers.all.count%> sneakers avaliable<h3>
+        <h3><%=@sneakers.count%> sneakers avaliable<h3>
 
 
 <form action="/sneakers/new"  method="get">

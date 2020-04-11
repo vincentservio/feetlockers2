@@ -5,7 +5,7 @@ class SneakersController < ApplicationController
     get '/sneakers' do 
         if logged_in?  
             @user = current_user
-            @sneakers = @user.sneakers
+            @sneakers = @user.sneakers.sort_by {|obj| obj.brand}
             erb :"sneakers/index"
         else 
             Sneaker.authenticate(params[:brand])  

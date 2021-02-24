@@ -5,7 +5,8 @@ gem 'activerecord', '~> 4.2', '>= 4.2.6', :require => 'active_record'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'rake'
 gem 'require_all'
-gem 'pg', :group => :production
+gem 'pg', '~> 0.18'
+# , :group => :production
 gem 'sqlite3', :group => :development
 gem 'thin'
 gem 'shotgun'

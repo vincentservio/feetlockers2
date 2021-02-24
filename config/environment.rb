@@ -14,4 +14,4 @@ configure :production, :development, :test do
   )
  end
 
-require_all 'app'
+require 'app'

@@ -1,16 +1,12 @@
 development:
   adapter: postgresql
-  database: my_database_development
-  pool: 5
-  timeout: 5000
+  encoding: unicode
+  database: development
+  pool: 2
 
-test:
-  adapter: postgresql
-  database: my_database_test
-  pool: 5
-  timeout: 5000
-
-production:
-  adapter: postgresql
-  database: catan
-  pool: 5
+  production:
+    adapter: postgresql
+    encoding: unicode
+    pool: 5
+    host: <%= ENV['DATABASE_MOST']%>
+    databbase: production

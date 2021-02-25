@@ -8,5 +8,5 @@ development:
     adapter: postgresql
     encoding: unicode
     pool: 5
-    host: <%= ENV['DATABASE_MOST']%>
+ url: <%= ENV['DATABASE_URL'] %>
     database: production

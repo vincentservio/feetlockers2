@@ -9,4 +9,4 @@ development:
     encoding: unicode
     pool: 5
     host: <%= ENV['DATABASE_MOST']%>
-    databbase: production
+    database: production

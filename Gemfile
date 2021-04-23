@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'sinatra'
 gem 'activerecord'
+gem 'byebug'
 # , :require => 'active_record'
 # , '~> 4.2', '>= 4.2.6', :require => 'active_record'
 gem 'sinatra-activerecord'

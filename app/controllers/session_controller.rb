@@ -10,6 +10,7 @@ post '/login' do
     session[:user_id] = user.id
     redirect '/sneakers'
   else 
+       
     redirect '/login'
   end 
 end

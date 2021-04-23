@@ -47,6 +47,7 @@ class SneakersController < ApplicationController
 
 
     get '/sneakers/:id/edit' do 
+        #    byebug
         find_sneaker
             if validate_user
                 @sneaker
@@ -80,11 +81,12 @@ class SneakersController < ApplicationController
     private 
 
     def find_sneaker
+        
         @sneaker = Sneaker.find_by_id(params[:id])
     end
 
     def validate_user
-        @sneaker.user_id == current_user.id
+        @sneaker.user_id == current_user.id.to_s
     end
 
 end

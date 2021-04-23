@@ -11,8 +11,10 @@ class UsersController < ApplicationController
             user.save 
             session["user_id"] = user.id
             redirect "/sneakers"
-        else 
+        else  
+          
             redirect "/user"
+          
         end
   end
 end

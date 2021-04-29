@@ -88,6 +88,8 @@ GEM
     sinatra-activerecord (2.0.22)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
+    sinatra-redirect-with-flash (0.2.1)
+      sinatra (>= 1.0.0)
     thin (1.8.0)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -122,6 +124,7 @@ DEPENDENCIES
   shotgun
   sinatra
   sinatra-activerecord
+  sinatra-redirect-with-flash
   thin
   tux
 

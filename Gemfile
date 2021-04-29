@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
-
+gem 'sinatra-redirect-with-flash'
+# gem 'rails-assets-sweetalert2', source: 'https://rails-assets.org'
+# gem 'sweet-alert-confirm'
 gem 'sinatra'
 gem 'activerecord'
 gem 'byebug'

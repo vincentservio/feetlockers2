@@ -1,5 +1,4 @@
 
-require 'sinatra/flash'
 enable :sessions
 class SneakersController < ApplicationController
       
@@ -34,7 +33,7 @@ class SneakersController < ApplicationController
                 redirect "/sneakers/#{sneaker.id}"
             else 
                             #    sweetalert_error('Your resource is created and available.', 'Successfully created', persistent: 'Awesome!')
-  flash[:notice] = "Hooray, Flash is working!"
+
                 redirect "/sneakers/new"
                             #    sweetalert_error('Your resource is created and available.', 'Successfully created', persistent: 'Awesome!')
 
